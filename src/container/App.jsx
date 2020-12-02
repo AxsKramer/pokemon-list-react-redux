@@ -3,6 +3,7 @@ import {BrowserRouter, Switch, Route, Redirect} from 'react-router-dom'
 import Navbar from '../components/Navbar';
 import Pokemones from '../components/Pokemones';
 import Login from '../components/Login';
+import Perfil from '../components/Perfil';
 import {auth } from '../firebase';
 
 const App = () => {
@@ -36,6 +37,7 @@ const App = () => {
         <Navbar />
         <Switch>
           <PrivateRoute exact path='/' component={Pokemones} />
+          <PrivateRoute exact path='/perfil' component={Perfil} />
           <Route exact path='/login' component={Login} />
         </Switch>
       </div>
